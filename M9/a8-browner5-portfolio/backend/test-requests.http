@@ -1,0 +1,92 @@
+### CREATE five documents.
+
+POST http://localhost:3000/todolists HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Errands",
+  "militarytime": 1900,
+  "description": "Pick up Rx at Safeway",
+  "datetodo": "11-27-23",
+  "iscompleted": false
+}
+
+### CREATE 2
+POST http://localhost:3000/todolists HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Shopping",
+  "militarytime": 1900,
+  "description": "Get groceries at Safeway",
+  "datetodo": "11-27-23",
+  "iscompleted": false
+}
+
+### CREATE 3
+POST http://localhost:3000/todolists  HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Shopping",
+  "militarytime": 1100,
+  "description": "Buy Moms Birthday Present",
+  "datetodo": "12-28-23",
+  "iscompleted": false
+}
+
+### CREATE 4
+POST http://localhost:3000/todolists HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Errands",
+  "militarytime": 1300,
+  "description": "Get my hair cut and colored.",
+  "datetodo": "01-21-24",
+  "iscompleted": false
+}
+
+### CREATE 5
+POST http://localhost:3000/todolists HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Shopping",
+  "militarytime": 1200,
+  "description": "Buy X-Mas Presents.",
+  "datetodo": "12-19-23",
+  "iscompleted": false
+}
+
+### RETRIEVE all documents.
+GET http://localhost:3000/todolists HTTP/1.1
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/todolists/656531e49436611425799b13  HTTP/1.1
+
+
+### UPDATE one document's by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/todolists/656531e69436611425799b15 HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Shopping",
+  "militarytime": 1300,
+  "description": "Get groceries at Safeway",
+  "datetodo": "11-27-23",
+  "iscompleted": true
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/todolists/656531ea9436611425799b19 HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/todolists HTTP/1.1
+
